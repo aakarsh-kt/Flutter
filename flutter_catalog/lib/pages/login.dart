@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
-import 'package:flutter_catalog/pages/utils/route.dart';
+import 'package:flutter_catalog/utils/route.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
