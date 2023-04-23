@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/pages/login.dart';
 import 'package:flutter_catalog/utils/route.dart';
+import 'package:flutter_catalog/widgets/themes.dart';
 import 'package:google_fonts/google_fonts.dart';
+// import 'package:flutter_catalog/widgets/drawer.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,10 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
+      theme: MyTheme.lighttheme(context),
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
         primarySwatch: Colors.deepOrange,

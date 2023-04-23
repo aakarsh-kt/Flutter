@@ -1,8 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/utils/route.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
+
+  movetoHome(BuildContext context) async {
+    Navigator.pushNamed(context, MyRoutes.homeRoute);
+  }
+
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +26,13 @@ class MyDrawer extends StatelessWidget {
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
                 accountName: Text("Akarsh"),
-                accountEmail: Text("aakarshofficial009@gmail.com"),
+                accountEmail: Text("akarshofficial009@gmail.com"),
                 currentAccountPicture:
                     CircleAvatar(backgroundImage: NetworkImage(imgUrl)),
               ),
             ),
             ListTile(
+              onTap: () => movetoHome(context),
               leading: Icon(
                 CupertinoIcons.home,
               ),
@@ -33,6 +41,7 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
             ListTile(
+            
               leading: Icon(
                 CupertinoIcons.profile_circled,
               ),
@@ -42,7 +51,7 @@ class MyDrawer extends StatelessWidget {
               leading: Icon(
                 CupertinoIcons.mail,
               ),
-              title: Text("Mail"),
+              title: Text("Manage Email id"),
             ),
           ],
         ),
